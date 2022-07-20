@@ -1,0 +1,25 @@
+header {
+    background-color: rgb(23, 29, 40);
+    padding: 10px 0;
+}
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 24px;
+}
+.logo:hover {
+    color: rgba(225, 225, 225, .6);
+    text-shadow: 0 0 3px #fff;
+
+}
+.cart {
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 0;
+    position: relative;
+}
+.cart span {
+    margin-left: 5px;
+}

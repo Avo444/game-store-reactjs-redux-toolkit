@@ -1,0 +1,37 @@
+.cart-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 300px;
+    height: auto;
+    padding: 10px 5px;
+    background-color: #1F2123;
+    z-index: 1;
+}
+
+.cart-menu p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;    
+}
+
+.cart-menu span {
+    margin-right: 10px;
+}
+.cart-menu button {
+    /* padding: 2px 8px; */
+    background-color: transparent;
+    color: cyan;
+    border-radius: 0 10px;
+    border: 1px solid cyan;
+}
+p 
+{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.cart-footer {
+    border-top: 1px solid #fff;
+    margin-top: 20px;
+    padding-top: 10px;
+}

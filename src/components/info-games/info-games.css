@@ -1,0 +1,8 @@
+.info {
+    color: #fff;
+    font-size: 18px;
+}
+.info span {
+    font-weight: 500;
+    color: rgba(225, 225, 225, .8);
+}
