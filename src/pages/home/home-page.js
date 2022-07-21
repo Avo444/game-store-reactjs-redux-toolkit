@@ -4,9 +4,9 @@ import './home-page.css';
 
 export default function HomePage() {
     return (
-        <main>
+        <section className='shop'>            
             <InfoGames />
             <GetGames />
-        </main>
+        </section>
     );
 }

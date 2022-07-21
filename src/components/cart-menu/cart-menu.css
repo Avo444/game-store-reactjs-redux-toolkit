@@ -12,18 +12,23 @@
 .cart-menu p {
     color: #fff;
     font-size: 18px;
-    font-weight: 500;    
+    font-weight: 500;
+    margin-bottom: 0;  
 }
 
 .cart-menu span {
     margin-right: 10px;
 }
 .cart-menu button {
-    /* padding: 2px 8px; */
-    background-color: transparent;
-    color: cyan;
+    padding: 0px 5px !important;
+    color: red !important;
     border-radius: 0 10px;
-    border: 1px solid cyan;
+    border-color: #ff0000 !important;
+}
+.cart-menu button:hover {
+    background-color: #ff0000;
+    box-shadow: #ff0000 1px 1px 10px 0;
+    color: #fff !important;
 }
 p 
 {
