@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { TotalPrice } from '../../features/cart/cart';
 import { removeItemInCart } from '../../features/cart/cartSlice';
 import './cart-menu.css';
@@ -29,7 +30,7 @@ export default function CartMenu() {
             {
                 items.length > 0 ? <div className='cart-footer'>
                     <p>Всего: {TotalPrice(items)}$</p>
-                    <a href='#'>Checkout</a>
+                    <Link to='/checkout'>Checkout</Link>
                 </div> : null
             }
         </div>

@@ -4,9 +4,13 @@ import { useDispatch } from 'react-redux';
 import swal from 'sweetalert';
 import { removeItemInCart, addItemInCart } from '../../features/cart/cartSlice';
 import './game-page.css';
+import { useEffect } from 'react';
 
 export default function GamePage() {
     const game = useSelector((state) => state.game.gameForView);
+    useEffect(() => {
+        document.title = game.title+' | Game Store';
+    })
     const cartItems = useSelector(state => state.cart.itemsOnCart);
     const itemInCart = cartItems.some((cartitem) => cartitem.id === game.id);
     const dispatch = useDispatch();
@@ -17,7 +21,7 @@ export default function GamePage() {
                 <div className='row'>
                     <div className='col-lg-7'>
                         <div className='inf d-flex flex-column align-items-center'>
-                            <img src={game.picture}  />
+                            <img src={game.picture} alt={game.title} />
                             <p>{game.description}</p>
                         </div>
                     </div>

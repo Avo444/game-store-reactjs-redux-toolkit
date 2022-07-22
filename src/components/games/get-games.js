@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 // import { createBrowserHistory } from 'history';
+import swal from 'sweetalert';
 import { addItemInCart, removeItemInCart } from '../../features/cart/cartSlice';
 import { getGamesForView } from '../../features/games/gameSlice';
 import './get-games.css';
@@ -27,7 +28,7 @@ export default function GetGames() {
                                     }}>
                                         <div className='picture' style={{backgroundImage: `url('${game.picture}')`}}></div>
                                         <div className='info-bar'>
-                                            <a href="#">{game.title}</a>
+                                            <h3>{game.title}</h3>
                                             <p className='desc'>{`${desc.substring(0, 40)} ...`}</p>
                                             <div className="d-flex justify-content-end align-items-center price-and-buy">
                                                 <span>{game.price}$</span>
@@ -35,11 +36,13 @@ export default function GetGames() {
                                                     e.stopPropagation();
                                                     if(!isItemInCart) {
                                                         dispatch(addItemInCart(game));
+                                                        swal('Success!', 'This game has been added to the cart!', 'success');
                                                     }
                                                     else {
                                                         dispatch(removeItemInCart(game.id));
+                                                        swal('Success!', 'This game is removed from cart!', 'success');
                                                     }
-                                                }} className={isItemInCart ? 'active' : null}>{isItemInCart ? 'acquired' : 'Buy'}</button>
+                                                }} className={isItemInCart ? 'active' : null}>{isItemInCart ? 'acquired' : 'Add To Cart'}</button>
                                             </div>
                                         </div>
                                     </div>
